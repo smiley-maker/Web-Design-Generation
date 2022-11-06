@@ -202,7 +202,7 @@ def run(internetSize, crossoverRate, mutationRate, windowHeight, windowWidth):
     newInternet = []
     genList, fit = sortByFitness(internet)
 
-    for i in range(100):
+    for i in range(5):
         for i in range(int(internetSize/2)):
             website1 = genList[0]
             website2 = genList[1]
@@ -213,7 +213,7 @@ def run(internetSize, crossoverRate, mutationRate, windowHeight, windowWidth):
             newInternet.append(website1)
             newInternet.append(website2)
         internet = newInternet
-        print(len(internet))
+        print(internet)
     return None
 
 
@@ -268,7 +268,7 @@ def test_FitnessFunction(strategy):
 #rw.demo(rw.strategyM)
 #test_FitnessFunction()
 #rw.graphicsOff()
-run(50, 1.0, 0.005, 500, 500) #Runs the GA with a population of 300, crossover of 1.0, and mutation rate of 0.5%
+run(5, 1.0, 0.005, 50, 50) #Runs the GA with a population of 300, crossover of 1.0, and mutation rate of 0.5%
 #rw.demo("655653226256251011354352015156153612150253603154063556053350206052652345235064452051050250055261443355136326104054624356660651153153142006303653250000366102505562156135250253252253614104406152114254150133253035114563635132115161653606166062344")
 
 #Testing my best result against strategyM. I got fairly similar results. 
